@@ -1,0 +1,5 @@
+1. What function do we use to start a session?
+- session_start();
+
+2. Where are these session variables stored? 
+- $_SESSION[] or session superglobal
