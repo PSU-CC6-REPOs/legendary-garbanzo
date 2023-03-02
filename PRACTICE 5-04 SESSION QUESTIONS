@@ -1,0 +1,6 @@
+What function do we use to start a session?
+-A session is started with the session_start() function.
+
+
+Where are these session variables stored? 
+-All session variable values are stored in the global $_SESSION variable
