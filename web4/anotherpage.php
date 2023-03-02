@@ -1,9 +1,9 @@
 <?php
-    if(isset($_COOKIE['username'])){
-        echo 'User '. $_COOKIE['username'] . ' is set<br>';
-    } else {
-        echo 'User is not set';
-    }
+if(!isset($_COOKIE['auth']) || $_COOKIE['auth'] !== 'ok') {
+  // redirect to the login page if not
+  header('Location: login.php');
+  exit();
+}
 ?>
 
 <html lang="en">
@@ -13,6 +13,11 @@
     <title>Still Logged In</title>
 </head>
 <body>
-    You are still logged in...
+<h1>Another Page</h1>
+<p>You are still logged in.</p>
+<a href="loggedin.php">Go back to the logged in page</a>
+
 </body>
 </html>
+
+
